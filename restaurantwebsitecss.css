@@ -1,0 +1,739 @@
+*{
+    box-sizing:border-box;
+    }
+    html,body{
+        overflow-x:hidden;
+        height:100%;
+    }
+    body{
+        padding:0px;
+        margin:0px;
+       
+    }
+    /* header */
+    .menu{
+        border:px solid rgb(247, 187, 187);
+        width:100%;
+        height:20px;
+        position:fixed;
+        z-index:10px;
+        margin:0px;
+       text-transform: uppercase;
+    }
+  
+        #checkbox{
+         margin:0px;
+        }
+       
+       
+        .menu ul{
+            background:rgb(240, 115, 115);
+            list-style:none;
+            position:relative;
+            margin:0px;
+            padding:0px;
+            float:left;
+            width:100%;
+            
+            
+        }
+        .menu ul a{
+            color:aqua;
+            text-decoration: none;
+            font-size:15px;
+            line-height:32px;
+            padding: 16px;
+            font-weight:bold;
+            display:block;
+            margin:20px;
+            
+        }
+        .menu ul li{
+            float: left;
+            position: relative;
+            margin:0;
+            padding:0;
+            z-index:10px;
+        }
+        .menu ul li:hover{
+            background-color:yellow;
+        }
+        .menu ul ul {
+            position: absolute;
+            background-color:rgb(78, 85, 85);
+            top:100%;
+            left:0;
+            display:none;
+            width:200px;
+           
+        }
+        .menu ul ul li{
+            float:none;
+            width:200px;
+            
+        }
+        .menu ul ul ul{
+            top:0px;
+            left:100%;
+        }
+        .menu ul li:hover>ul{
+       display: block;
+        }
+        /* sidebar*/
+    .main{
+        height:100%;
+        margin-top:60px;
+        padding:10px 50px;
+    }
+    #sidebarMenu{
+        height:100%;
+        position:fixed;
+        left:0px;
+        top:0px;
+        width:250px;
+        margin-top:60px;
+        background-color:green;
+        transform:translateX(-250px);
+        transition:transform 250ms ease-in-out;
+        z-index:10px;
+        
+    }
+    .menu2 {
+        list-style:none;
+        padding:0px;
+        margin:0px;
+    }
+    .menu2 li{
+        color:white;
+        border-bottom:1ppx solid blue;
+    }
+    .menu2 li a{
+        color:white;
+        display:block;
+    text-decoration:none;
+    text-transform: uppercase;
+    padding:15px;
+    }
+    .menu2 li a:hover{
+        background-color:pink;
+    }
+    .sidebarIconToggle{
+        width:22px;
+        height:22px;
+        position:absolute;
+        z-index:20;
+        left:15px;
+        cursor:pointer;
+       
+    }
+    #openSidebarMenu:checked ~#sidebarMenu{
+    transform :translateX(0px);
+    }
+    /*.spinner{
+        height:3px;
+        transition:all 0.3s;
+        background-color:rgb(237, 141, 141);
+        width:2px;
+    }
+    
+    
+    .spinner.middle
+    .spinner.bottom{
+    margin-top:3px;
+    }*/
+    #openSidebarMenu:checked~ .sidebarIconToggle>.spinner .middle{
+        opacity:0;
+    }
+    #openSidebarMenu:checked~ .sidebarIconToggle>.spinner .top{
+        transform:rotate(135deg);
+        margin-top:-9px;
+    }
+    #openSidebarMenu:checked~ .sidebarIconToggle>.spinner .bottom{
+        transform:rotate(-135deg);
+    }
+  
+        .header{
+            background-color:rgb(218, 87, 87);
+             color:antiquewhite;
+             padding:6px;
+             position: fixed;
+             width:1300px;
+             margin:0px;
+    
+        }
+        .header a{
+            
+            font-size:20px;
+            margin:20px;
+            text-decoration: none;
+            color:blanchedalmond;
+        }
+        /* day meal menu*/
+        .first-box{
+            margin:auto;
+            display:flex;
+            flex-direction: row;
+            background-color: aliceblue;
+            height:180px;
+            width:100%;
+            
+        }
+        .first,
+        .second,
+        .third{
+            margin:30px;
+            position:relative;
+            left:50px;
+            top:0px;
+            height:90px;
+            width:90px;
+            margin-top:70px;
+        }
+        .first img{
+            cursor:pointer;
+          box-sizing: border-box;
+          height:90px;
+          width:90px;
+          margin:5px;
+          border-radius: 45%;
+        }
+        .second img{
+            cursor:pointer;
+          box-sizing: border-box;
+          height:90px;
+          width:90px;
+          margin:5px;
+          border-radius: 45%;
+        }
+        .third img{
+            cursor:pointer;
+          box-sizing: border-box;
+          height:90px;
+          width:90px;
+          margin:5px;
+          border-radius: 45%;
+        }
+        .meal1{
+            position:absolute;
+            top:40px;
+            left:100px;
+             
+            
+        }
+        .meal2{
+            position:absolute;
+            top:40px;
+            left:100px;
+             
+            
+        }
+        .meal3{
+            position:absolute;
+            top:40px;
+            left:100px;
+             
+            
+        }
+        /* food item*/
+        .container{
+            display:flex;
+            flex-direction: row;
+            height: 200px;
+            width:1300px;
+            border:0px solid grey;
+            margin:5px;
+            background-color: gainsboro;
+        }
+        .box1{
+           
+            margin:15px;
+            border:0px solid black;
+            height:90px;
+            width:90px;
+        }
+        .child1{
+            margin-left: 40px;
+        }
+        .child2{
+            margin-left: 40px;
+        }
+       
+        .box1 img{
+             border-radius: 50%;
+            box-sizing: border-box;
+            height:110px;
+            width:110px;
+            cursor:pointer;
+        }
+        .container1{
+            display:flex;
+            flex-direction: row;
+            height: 200px;
+            width:1300px;
+            
+            
+            background-color: rgb(248, 240, 240);
+        }
+        .box2{
+           
+            margin:20px;
+            padding:20px;
+            border:0px solid black;
+            height:90px;
+            width:90px;
+        }
+        .child3{
+            margin-left: 40px;
+            margin-top:40px;
+        }
+        .child4{
+            margin-left: 40px;
+            margin-top:40px;
+        }
+       
+        .box2 img{
+             border-radius: 50%;
+            box-sizing: border-box;
+            height:110px;
+            width:110px;
+            cursor:pointer;
+           
+        }
+        .conta{
+            display:flex;
+            flex-direction: row;
+            
+        }
+       .food{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    .food1{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card1 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food1:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green1{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    .food2{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card2 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food2:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green2{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    
+    .conta1{
+            display:flex;
+            flex-direction: row;
+            margin:30px;
+        }
+       .food2{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card3 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food3:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green3{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    .food4{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card4 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food4:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green4{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    .food5{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card5 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food5:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green5{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    
+    
+    .conta2{
+            display:flex;
+            flex-direction: row;
+            
+        }
+       .food6{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card6 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food6:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green6{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    .food7{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card7 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food7:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green7{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    .food8{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card8 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food8:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green8{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    
+    .conta3{
+            display:flex;
+            flex-direction: row;
+            margin:30px;
+        }
+       .food9{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card9 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food9:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green9{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    .food10{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card10 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food10:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green10{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+    .food11{
+        height:400px;
+        width:350px;
+        border:0px solid;
+        margin:auto;
+        
+       }
+    .card11 img{
+        box-sizing: border-box;
+        height:300px;
+        width:350px;
+        border-radius: 15px;
+        padding:5px;
+    }
+    .food11:hover{
+        background-color: rgb(235, 230, 230);
+        cursor:pointer;
+        border:rgb(194, 181, 181);
+        border-radius: 15px;
+    }
+    .green11{
+        background-color:rgb(69, 110, 8);
+        color:aliceblue;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        left:300px;
+        border-radius: 3px;
+    }
+      .search{
+        padding:20px;
+        width:60px;
+        background-color: antiquewhite;
+      }  
+      .op{
+        padding:20px;
+        width:500px;
+      }
+      .foo{
+    padding:50px;
+    background-color:black;
+    color:white;
+    height:50%
+    
+    }
+    #wi{
+    padding:0px;
+    color:grey;
+    font-weight:bolder;
+    text-decoration:none;
+    flex-direction:row;
+    
+    
+    
+    }
+    #q{
+    top:0px;
+    padding:0px;
+    
+    margin:0px;
+    
+    }
+    #q a{
+    text-decoration:none;
+    color:white;
+    line-height:20px;
+    flex-direction:column;
+    margin:20px;
+    }
+    .pm{
+    flex-direction:row;
+    padding:0px;
+    margin:0px;
+    float:left;
+    }
+    .containerr{
+            position: fixed;
+            bottom:5px;
+            right:5px;
+    
+        }
+        .containerr img{
+            height:100px;
+            width:100px;
+            border-radius: 40px;
+        }
+        .menubar{
+            position:absolute;
+            top:5px;
+            left:10px;
+        }
+        .menubar img{
+            height:30px;
+            width:30px;
+        }
